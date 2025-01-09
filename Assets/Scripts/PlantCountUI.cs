@@ -9,9 +9,9 @@ public class PlantCountUI : MonoBehaviour
     public void UpdateSeeds (int seedsLeft, int seedsPlanted)
     {
         // UI text for number of seeds remaining
-        _remainingText.text = ("Seeds Remaining: " + seedsLeft);
+        _remainingText.text = ("" + seedsLeft);
 
         // UI text for number seeds planted
-        _plantedText.text = ("Seeds Planted: " + seedsPlanted);
+        _plantedText.text = ("" + seedsPlanted);
     }
 }

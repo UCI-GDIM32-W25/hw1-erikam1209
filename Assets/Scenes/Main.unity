@@ -583,7 +583,7 @@ MonoBehaviour:
   _playerTransform: {fileID: 935932060}
   _plantPrefab: {fileID: 3366524200736942211, guid: c5f250ac3e870d345a58fb06973b7efa, type: 3}
   _numSeeds: 5
-  _plantCountUI: {fileID: 0}
+  _plantCountUI: {fileID: 1167303340}
 --- !u!1 &1167303336
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 1167303337}
   - component: {fileID: 1167303339}
   - component: {fileID: 1167303338}
+  - component: {fileID: 1167303340}
   m_Layer: 5
   m_Name: Text_SeedsPlanted
   m_TagString: Untagged
@@ -718,6 +719,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167303336}
   m_CullTransparentMesh: 1
+--- !u!114 &1167303340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167303336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebc7c403a9d34bf6ac89b8e35043f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _plantedText: {fileID: 543629224}
+  _remainingText: {fileID: 179384848}
 --- !u!1 &1327915574
 GameObject:
   m_ObjectHideFlags: 0

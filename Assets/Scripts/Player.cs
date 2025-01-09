@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         _numSeedsPlanted = 0;
 
         // Sets up the Text UI
-        //_plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
     }
 
     private void Update()
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
             plant_object.transform.position = plant_position;
             _numSeedsLeft -= 1;
             _numSeedsPlanted += 1;
-            //_plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+            _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
         }
     }
 }
