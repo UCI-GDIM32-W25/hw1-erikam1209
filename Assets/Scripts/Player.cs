@@ -13,7 +13,14 @@ public class Player : MonoBehaviour
 
     private void Start ()
     {
-        
+        // Starts the game with the player having 5 seeds to plant
+        _numSeedsLeft = _numSeeds;
+
+        // Starts the game with the player not planting any seeds yet
+        _numSeedsPlanted = 0;
+
+        // Sets up the Text UI
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
     }
 
     private void Update()
