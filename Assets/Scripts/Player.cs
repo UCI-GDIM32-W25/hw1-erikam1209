@@ -30,15 +30,17 @@ public class Player : MonoBehaviour
             _playerTransform.Translate(Vector3.up * _speed * Time.deltaTime);
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             _playerTransform.Translate(Vector3.right * _speed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.S))
+        
+        if (Input.GetKey(KeyCode.S))
         {
             _playerTransform.Translate(Vector3.down * _speed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.A))
+        
+        if (Input.GetKey(KeyCode.A))
         {
             _playerTransform.Translate(Vector3.left * _speed * Time.deltaTime);
         }
@@ -54,6 +56,8 @@ public class Player : MonoBehaviour
         if(_numSeedsLeft > 0)
         {
             GameObject plant_object = Instantiate(_plantPrefab);
+            Vector3 plant_position = _playerTransform.position;
+            plant_object.transform.position = plant_position;
             _numSeedsLeft -= 1;
             _numSeedsPlanted += 1;
             //_plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
