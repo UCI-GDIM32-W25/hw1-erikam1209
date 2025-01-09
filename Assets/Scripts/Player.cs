@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         _numSeedsPlanted = 0;
 
         // Sets up the Text UI
-        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+        //_plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
     }
 
     private void Update()
@@ -42,10 +42,21 @@ public class Player : MonoBehaviour
         {
             _playerTransform.Translate(Vector3.left * _speed * Time.deltaTime);
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            PlantSeed();
+        }
     }
 
     public void PlantSeed ()
     {
-        
+        if(_numSeedsLeft > 0)
+        {
+            GameObject plant_object = Instantiate(_plantPrefab);
+            _numSeedsLeft -= 1;
+            _numSeedsPlanted += 1;
+            //_plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+        }
     }
 }
