@@ -3,10 +3,6 @@
 ## W1L2 In-Class Activity
 
 Put your notes from the W1L2 (Thurs, Jan 9) in-class activity here.
-
-## Devlog
-Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
-
 Objects:
     Player
         - Attribute: Bunny Sprite
@@ -21,6 +17,17 @@ Objects:
         - Attribute: Text
         - Output: Displays the number of seeds remaining and the number of seeds planted (Numbers update based on when the space bar is pressed)
 
+## Devlog
+Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
+
+
+The brekdown help organize how I was going to write the code and which scripts I would need. For example, the Bunny sprite had its own script and wrote the 
+directional movements (WASD) and interaction (Space) in the Update(). Also, keeping the TextUI in its own class (PlantCountUI) help keep the code organized by
+only excuting methods (PlantCountUI.UpdateSeeds) relating to the TextUI. 
+
+Classes used: Player, PlantCountUI
+Methods: PlantCountUI.UpdateSeeds, Player.PlantSeed()
+GameObjects: Player, Plant Prefab
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
